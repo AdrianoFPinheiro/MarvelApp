@@ -73,12 +73,12 @@ open class MarvelRepositoryImpl: MarvelRepository {
                             callback.onSuccess(response.body()!!)
                         } else {
                             callback.onError()
-                            Log.e("Response", " response null")
+                            Log.e("LOG Response", " response null")
                         }
 
                     } else {
                         callback.onError()
-                        Log.e("Response", response.raw().networkResponse().toString())
+                        Log.e("LOG Response", response.raw().networkResponse().toString())
                     }
 
                 }
@@ -86,7 +86,7 @@ open class MarvelRepositoryImpl: MarvelRepository {
                 override fun onFailure(call: Call<ReturnData>, t: Throwable) {
                     callback.onError()
                     t.printStackTrace()
-                    Log.e("Response", javaClass.simpleName + " not response 2 " + t)
+                    Log.e("LOG Response", javaClass.simpleName + " not response 2 " + t)
                 }
             })
     }

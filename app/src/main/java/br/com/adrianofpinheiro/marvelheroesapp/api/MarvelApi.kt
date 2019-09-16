@@ -1,5 +1,6 @@
 package br.com.adrianofpinheiro.marvelheroesapp.api
 
+import android.util.Log
 import br.com.adrianofpinheiro.marvelheroesapp.model.ReturnData
 import retrofit2.Call
 import retrofit2.http.GET
@@ -17,6 +18,7 @@ interface MarvelApi{
 }
 
 interface OnGetMarvelCallback{
-    fun onSuccess(marvelResponse: ReturnData)
+    fun onSuccess(marvelResponse: ReturnData){ Log.i("LOG", "Callback api")}
+
     fun onError()
 }

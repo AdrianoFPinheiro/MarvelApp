@@ -2,6 +2,7 @@ package br.com.adrianofpinheiro.marvelheroesapp.view.home
 
 import android.support.annotation.LayoutRes
 import android.support.v7.widget.RecyclerView
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -37,7 +38,6 @@ class MarvelCharacterAdapter(private val character: MutableList<Result>,
 
         fun bind(result: Result){
             this.char = result
-
             Picasso.get()
                 .load(result.thumbnail.path + "." + result.thumbnail.extension)
                 .into(itemView.image_thumbnail)
